@@ -1,0 +1,8 @@
+QuilljsCross.Android/bin
+QuilljsCross.Android/obj
+QuilljsCross.iOS/bin
+QuilljsCross.iOS/obj
+QuilljsCross.Shared/obj
+QuilljsCross.Shared/bin
+.vs
+packages
