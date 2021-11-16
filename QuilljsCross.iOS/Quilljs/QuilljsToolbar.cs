@@ -74,7 +74,7 @@ namespace QuilljsCross.iOS.Quilljs
             {
                 foreach (var item in ToolbarItems)
                 {
-                    ((UIBarButtonItem)item).Clicked -= QuilljsToolbar_Clicked;
+                    item.Clicked -= QuilljsToolbar_Clicked;
                 }
 
                 QuilljsEditor.SelectionChanged -= QuilljsEditor_SelectionChanged;
@@ -87,8 +87,8 @@ namespace QuilljsCross.iOS.Quilljs
         {
             foreach (var item in ToolbarItems)
             {
-                ((UIBarButtonItem)item).Clicked -= QuilljsToolbar_Clicked;
-                ((UIBarButtonItem)item).Clicked += QuilljsToolbar_Clicked;
+                item.Clicked -= QuilljsToolbar_Clicked;
+                item.Clicked += QuilljsToolbar_Clicked;
             }
         }
 
@@ -113,7 +113,7 @@ namespace QuilljsCross.iOS.Quilljs
             }
         }
 
-        private void QuilljsEditor_SelectionChanged(object sender, QuilljsSelectionChangedArgs e)
+        private void QuilljsEditor_SelectionChanged(object sender, QuilljsSelectionChangedEventArgs e)
         {
             foreach (var toolbarItem in ToolbarItems)
             {

@@ -28,8 +28,6 @@ namespace QuilljsCross.iOS.Quilljs
         {
         }
 
-        public event EventHandler<QuilljsSelectionChangedArgs> SelectionChanged;
-
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
@@ -82,6 +80,8 @@ namespace QuilljsCross.iOS.Quilljs
         #endregion
 
         #region IQuillEditor implementation
+        public event EventHandler<QuilljsSelectionChangedEventArgs> SelectionChanged;
+
         public string Html
         {
             get
@@ -246,7 +246,7 @@ namespace QuilljsCross.iOS.Quilljs
             messageArgs.TryGetValue("length", out string length);
             messageArgs.TryGetValue("formattingAttributes", out string formattingAttributes);
                         
-            var selectionChangedArgs = new QuilljsSelectionChangedArgs(formattingAttributes.Split(","), int.Parse(index), int.Parse(length), text);
+            var selectionChangedArgs = new QuilljsSelectionChangedEventArgs(formattingAttributes.Split(","), int.Parse(index), int.Parse(length), text);
             SelectionChanged?.Invoke(this, selectionChangedArgs);
         }
 
