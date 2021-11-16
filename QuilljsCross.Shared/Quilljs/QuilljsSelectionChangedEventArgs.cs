@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace QuilljsCross.Shared.Quilljs
 {
-    public class QuilljsSelectionChangedArgs : EventArgs
+    public class QuilljsSelectionChangedEventArgs : EventArgs
     {
-        public QuilljsSelectionChangedArgs(IEnumerable<string> selectionFormattingsAttributes, int startIndex, int lenght, string selection)
+        public QuilljsSelectionChangedEventArgs(IEnumerable<string> selectionFormattingsAttributes, int startIndex, int lenght, string selection)
         {
             SelectionFormattingAttributes = selectionFormattingsAttributes;
             StartIndex = startIndex;

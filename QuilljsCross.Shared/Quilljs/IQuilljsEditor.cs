@@ -4,7 +4,7 @@ namespace QuilljsCross.Shared.Quilljs
 {
     public interface IQuilljsEditor
     {
-        event EventHandler<QuilljsSelectionChangedArgs> SelectionChanged;
+        event EventHandler<QuilljsSelectionChangedEventArgs> SelectionChanged;
 
         string Html { get; set; }
 

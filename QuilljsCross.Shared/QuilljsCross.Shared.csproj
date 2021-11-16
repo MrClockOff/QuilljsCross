@@ -34,7 +34,7 @@
     <Compile Include="Quilljs\QuilljsToolbarItemModel.cs" />
     <Compile Include="Quilljs\IQuillToolbarBuilder.cs" />
     <Compile Include="Quilljs\IQuilljsToolbar.cs" />
-    <Compile Include="Quilljs\QuilljsSelectionChangedArgs.cs" />
+    <Compile Include="Quilljs\QuilljsSelectionChangedEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Quilljs\" />
